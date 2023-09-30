@@ -1,0 +1,44 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputBox{
+  
+  width: 700px;
+  height: 180px;
+  background: black;
+  margin-bottom: 30px;
+  
+  
+}
+
+.add-button{
+  height: 60px;
+  width: 10%;
+  
+}
+
+input{
+  margin-top: 60px;
+  margin-left: 20px;
+  /* margin: 20px; */
+  height: 60px;
+  width: 80%;
+}
+
+.task-component{
+  background: #262626;
+  width: 700px;
+  height: 180px;
+  color: aliceblue;
+  margin-top: 10px;
+}
+    
