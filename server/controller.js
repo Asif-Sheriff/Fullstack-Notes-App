@@ -1,28 +1,27 @@
-// import mongoose from "mongoose";
 import { todoTask } from "./model.js";
 
-export async function getTodo(req,res){
+
+//This function gets all the tasks from the database
+export async function getTodo(req, res) {
     todoTask.find()
-    .then((data)=>{res.send(data);});    
+        .then((data) => { res.send(data); });
 
 }
 
-export async function saveTodo(req,res){
-    const { task,date }=req.body;
-    console.log({ task,date });
-
-   
-
-    todoTask.create({ task,date })
-    .then(()=>{console.log("Added task successfully");}) 
-
+//This function adds tasks to the database
+export async function saveTodo(req, res) {
+    const { task } = req.body;    
+    todoTask.create({ task })
+        .then(() => { console.log("Added task successfully"); })
 }
 
-export async function deleteTodo(req,res){
-    // const { text }=req.body;
-    // console.log({ text });
+//this function deletes tasks form the DB
+export async function deleteTodo(req, res) {
 
-    todoTask.deleteMany()
-    .then(()=>{console.log("Deleted successfully");}) 
+    // console.log("delete todo was called");-->use for debugging
+    const { id } = req.body;  
+
+    todoTask.findByIdAndDelete(id)
+        .then(() => { console.log("Deleted task successfully"); })
 
 }
