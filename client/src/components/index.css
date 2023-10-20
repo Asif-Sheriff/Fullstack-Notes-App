@@ -1,10 +1,15 @@
-*{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* *{
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-}
+} */
 
-body{
+/* body{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +34,7 @@ body{
 input{
   margin-top: 60px;
   margin-left: 20px;
-  /* margin: 20px; */
+  margin: 20px;
   height: 60px;
   width: 80%;
 }
@@ -41,4 +46,4 @@ input{
   color: aliceblue;
   margin-top: 10px;
 }
-    
+     */

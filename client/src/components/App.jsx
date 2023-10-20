@@ -21,12 +21,15 @@ function App() {
 
   return (
     <>
-      <InputBox handleChange={handleChange} add={addTask} task={task} />      
+      <InputBox handleChange={handleChange} add={addTask} task={task} />
+      <div className="flex flex-col  pt-10 sm:pt-3 items-center sm:flex-wrap sm:justify-start sm:flex-row p-2 gap-2">
+
       {tasks.map((item, index) => {
         return (
           <Task key={index} id={item.id} taskContent={item.task} deleteTask={deleteTask} setTasks={setTasks} />
         )
       })}
+      </div>      
     </>
   )
 }
